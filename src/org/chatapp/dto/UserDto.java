@@ -1,5 +1,7 @@
 package org.chatapp.dto;
 
+import org.chatapp.entity.User;
+
 public class UserDto {
 	private long id;
 	private String username;
@@ -7,6 +9,12 @@ public class UserDto {
 
 	public UserDto() {
 		super();
+	}
+
+	public UserDto(User user) {
+		this.id = user.getId();
+		this.username = user.getUsername();
+		this.password = user.getPassword();
 	}
 
 	public long getId() {

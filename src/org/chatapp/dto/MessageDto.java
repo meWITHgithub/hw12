@@ -2,6 +2,8 @@ package org.chatapp.dto;
 
 import java.sql.Date;
 
+import org.chatapp.entity.Message;
+
 public class MessageDto {
 	private long mid;
 	private String text;
@@ -10,6 +12,12 @@ public class MessageDto {
 
 	public MessageDto() {
 		super();
+	}
+
+	public MessageDto(Message message) {
+		this.mid = message.getMid();
+		this.text = message.getText();
+		this.creator = new UserDto(message.getCreator());
 	}
 
 	public long getMid() {
