@@ -15,7 +15,7 @@ public class MessageDto {
 	}
 
 	public MessageDto(Message message) {
-		this.mid = message.getMid();
+		this.mid = message.getId();
 		this.text = message.getText();
 		this.creator = new UserDto(message.getCreator());
 	}

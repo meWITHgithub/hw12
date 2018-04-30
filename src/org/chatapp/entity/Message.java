@@ -2,22 +2,13 @@ package org.chatapp.entity;
 
 import java.sql.Date;
 
-public class Message {
-	private long mid;
+public class Message extends ChatEntity {
 	private String text;
 	private User creator;
 	private Date date;
 
 	public Message() {
 		super();
-	}
-
-	public long getMid() {
-		return mid;
-	}
-
-	public void setMid(long mid) {
-		this.mid = mid;
 	}
 
 	public String getText() {

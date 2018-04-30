@@ -2,22 +2,13 @@ package org.chatapp.entity;
 
 import java.util.List;
 
-public class User {
-	private long id;
+public class User extends ChatEntity {
 	private String username;
 	private String password;
 	private List<Message> messages;
 
 	public User() {
 		super();
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public String getUsername() {
